@@ -42,11 +42,11 @@ module.exports = {
           caseInsensitive: true,
         },
         "groups": [
+          "external",
+          "builtin",
           "index",
           ["sibling", "parent"],
           "internal",
-          "external",
-          "builtin",
           "object",
           "type"
         ]
