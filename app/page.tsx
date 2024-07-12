@@ -11,7 +11,7 @@ export default function Home() {
         <Text as="p" className="mt-4 text-center text-lg text-gray-500">
           Get started by editing{" "}
           <code className="rounded-md bg-gray-100 p-1 font-mono text-sm">
-            pages/Component.tsx
+            app/page.tsx
           </code>
         </Text>
       </div>
