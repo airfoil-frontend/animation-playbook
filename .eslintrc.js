@@ -5,9 +5,10 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
     "prettier",
   ],
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "import"],
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: "module",
@@ -16,6 +17,40 @@ module.exports = {
     },
   },
   rules: {
-    'no-console': 'warn',
-  }
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-sort-props": [
+      2,
+      {
+        callbacksLast: true,
+        shorthandFirst: true,
+        ignoreCase: true,
+        reservedFirst: true,
+      },
+    ],
+    "react/no-unknown-property": [
+      "error",
+      { ignore: ["css", "global", "jsx"] },
+    ],
+    "import/first": "error",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          order: "asc",
+          caseInsensitive: true,
+        },
+        "groups": [
+          "index",
+          ["sibling", "parent"],
+          "internal",
+          "external",
+          "builtin",
+          "object",
+          "type"
+        ]
+      },
+    ],
+  },
 };
