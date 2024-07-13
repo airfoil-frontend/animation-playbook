@@ -9,8 +9,6 @@ export interface TextareaContentProps extends FieldProps {
   contentProps?: ComponentPropsWithoutRef<"div">;
   id: string;
   placeholder?: string;
-  leftContent?: ReactNode;
-  rightContent?: ReactNode;
   fieldProps?: FieldFullProps;
 }
 
