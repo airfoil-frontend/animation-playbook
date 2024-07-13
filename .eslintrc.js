@@ -1,10 +1,7 @@
 module.exports = {
   extends: [
-    "next",
-    "next/core-web-vitals",
-    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
     "plugin:import/recommended",
     "prettier",
   ],
@@ -37,19 +34,19 @@ module.exports = {
       "error",
       {
         "newlines-between": "always",
-        "alphabetize": {
+        alphabetize: {
           order: "asc",
           caseInsensitive: true,
         },
-        "groups": [
+        groups: [
           "external",
           "builtin",
           "index",
           ["sibling", "parent"],
           "internal",
           "object",
-          "type"
-        ]
+          "type",
+        ],
       },
     ],
   },
