@@ -19,9 +19,9 @@ import {
   buttonTheme,
   type ButtonVariants,
 } from "./Button.theme";
-import { cn } from "../functions";
 
 import { Icon } from "@/common/components/CustomIcon";
+import { cn } from "@/common/functions";
 
 export interface ButtonBaseProps extends ButtonVariants {
   iconLeft?: ReactNode;
