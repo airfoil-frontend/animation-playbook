@@ -1,3 +1,4 @@
+import { RenderButtons } from "@/common/components/render/renderButtons";
 import { RenderHeaders } from "@/common/components/render/renderHeaders";
 import { Text } from "@/common/components/Text";
 
@@ -17,8 +18,10 @@ export default function Home() {
       </div>
 
       <div className="h my-10 w-full border border-gray-200/30" />
-
       <RenderHeaders />
+
+      <div className="h my-10 w-full border border-gray-200/30" />
+      <RenderButtons />
     </main>
   );
 }
