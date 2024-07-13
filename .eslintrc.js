@@ -29,6 +29,7 @@ module.exports = {
       "error",
       { ignore: ["css", "global", "jsx"] },
     ],
+    "import/no-named-as-default": "off",
     "import/first": "error",
     "import/order": [
       "error",
