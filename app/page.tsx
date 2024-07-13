@@ -1,6 +1,7 @@
 import { RenderButtons } from "@/common/components/render/renderButtons";
 import { RenderHeaders } from "@/common/components/render/renderHeaders";
 import { RenderInput } from "@/common/components/render/renderInput";
+import { RenderModal } from "@/common/components/render/renderModal";
 import { RenderTextarea } from "@/common/components/render/renderTextarea";
 import { Text } from "@/common/components/Text";
 
@@ -30,6 +31,9 @@ export default function Home() {
 
       <div className="h my-10 w-full border border-gray-200/30" />
       <RenderInput />
+
+      <div className="h my-10 w-full border border-gray-200/30" />
+      <RenderModal />
     </main>
   );
 }

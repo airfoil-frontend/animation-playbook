@@ -10,6 +10,7 @@
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,scss}'"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
     "next": "14.2.5",
