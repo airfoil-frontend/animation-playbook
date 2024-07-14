@@ -61,6 +61,12 @@ export const modalTheme = tv(
       body: ["flex-1", "px-6", "sm:px-10"],
     },
     variants: {
+      hasOverlay: {
+        true: {},
+        false: {
+          overlay: ["backdrop-blur-none", "bg-transparent"],
+        },
+      },
       fullPage: {
         true: {
           content: ["h-full"],
@@ -118,6 +124,7 @@ export const modalTheme = tv(
       fullscreen: false,
       variant: "default",
       disableCenterY: false,
+      hasOverlay: true,
     },
   },
   { responsiveVariants: ["sm", "md", "lg"] },

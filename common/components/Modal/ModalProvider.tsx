@@ -19,6 +19,7 @@ const useModalValues = (props: ModalProviderProps) => {
     variant: props.variant,
     overflow: props.overflow,
     disableCenterY: props.disableCenterY,
+    hasOverlay: props.hasOverlay,
   });
 
   return {

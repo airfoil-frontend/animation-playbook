@@ -14,7 +14,6 @@ export interface ModalProps
     ModalVariants,
     DialogProps {
   hasCloseButton?: boolean;
-  hasOverlay?: boolean;
   preventClickOutsideToClose?: boolean;
 }
 export const Modal = ({
