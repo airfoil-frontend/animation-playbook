@@ -3,6 +3,7 @@ import { RenderHeaders } from "@/common/components/render/renderHeaders";
 import { RenderInput } from "@/common/components/render/renderInput";
 import { RenderModal } from "@/common/components/render/renderModal";
 import { RenderPopover } from "@/common/components/render/renderPopover";
+import { RenderTag } from "@/common/components/render/renderTag";
 import { RenderTextarea } from "@/common/components/render/renderTextarea";
 import { Text } from "@/common/components/Text";
 
@@ -38,6 +39,9 @@ export default function Home() {
 
       <div className="h my-10 w-full border border-gray-200/30" />
       <RenderPopover />
+
+      <div className="h my-10 w-full border border-gray-200/30" />
+      <RenderTag />
     </main>
   );
 }
