@@ -7,12 +7,12 @@ export const tagTheme = tv(
     ],
     variants: {
       variant: {
-        primary: ["bg-element-primary", "text-text-on-primary"],
-        secondary: ["bg-element-secondary", "text-text-on-secondary"],
+        primary: ["bg-element-primary", "text-text-em-high"],
+        secondary: ["bg-element-secondary", "text-text-em-high"],
         tertiary: ["bg-element-tertiary", "text-text-on-tertiary"],
-        info: ["bg-element-primary", "text-text-on-primary"],
-        warning: ["bg-element-warning", "text-text-warning"],
-        success: ["bg-element-success", "text-text-success"],
+        info: ["bg-element-primary", "text-text-em-high"],
+        warning: ["bg-element-warning", "text-text-on-warning"],
+        success: ["bg-element-success", "text-text-on-success"],
         error: ["bg-element-error", "text-text-on-error"],
       },
       disabled: {
