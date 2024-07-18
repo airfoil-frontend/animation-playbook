@@ -163,6 +163,7 @@ export const buttonTheme = tv({
         "px-3",
         "rounded-xl",
         "leading-5",
+        "hover:border-t",
         "hover:after:bg-transparent",
         "data-[state=open]:after:bg-transparent",
         "data-[state=open]:ring-1",

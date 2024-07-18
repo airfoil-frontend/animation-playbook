@@ -1,16 +1,15 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  content: [
-    "./common/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./common/**/*.{js,ts,jsx,tsx}", "./app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       zIndex: {
         elevated: "1",
         header: "2",
         modal: "50",
+        popover: "51",
+        tooltip: "52",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -47,8 +46,8 @@ const config = {
           tertiary: "#292E36",
           disabled: "#1E2226",
           success: "#054511",
-          warning: "#660707",
-          error: "#573B0A",
+          error: "#660707",
+          warning: "#573B0A",
         },
         link: "#2563EB",
         success: "#29C244",

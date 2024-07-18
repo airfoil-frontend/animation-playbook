@@ -1,4 +1,5 @@
 import { RenderButtons } from "@/common/components/render/renderButtons";
+import { RenderCombobox } from "@/common/components/render/renderCombobox";
 import { RenderHeaders } from "@/common/components/render/renderHeaders";
 import { RenderInput } from "@/common/components/render/renderInput";
 import { RenderModal } from "@/common/components/render/renderModal";
@@ -27,6 +28,9 @@ export default function Home() {
 
       <div className="h my-10 w-full border border-gray-200/30" />
       <RenderButtons />
+
+      <div className="h my-10 w-full border border-gray-200/30" />
+      <RenderCombobox />
 
       <div className="h my-10 w-full border border-gray-200/30" />
       <RenderTextarea />
