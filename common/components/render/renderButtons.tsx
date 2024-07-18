@@ -35,6 +35,17 @@ export const RenderButtons = () => {
           >
             Button
           </Button>
+          <Button
+            loading
+            iconLeft={<Icon icon="lucide:plus" />}
+            iconRight={<Icon icon="lucide:plus" />}
+            size={size}
+          >
+            Loading
+          </Button>
+          <Button iconOnly size={size}>
+            <Icon icon="lucide:plus" />
+          </Button>
         </div>
       ))}
     </div>
