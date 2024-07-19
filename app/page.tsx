@@ -5,6 +5,7 @@ import { RenderInput } from "@/common/components/render/renderInput";
 import { RenderModal } from "@/common/components/render/renderModal";
 import { RenderPopover } from "@/common/components/render/renderPopover";
 import { RenderRadio } from "@/common/components/render/renderRadio";
+import { RenderSegmentedControl } from "@/common/components/render/renderSegmentedControl";
 import { RenderTag } from "@/common/components/render/renderTag";
 import { RenderTextarea } from "@/common/components/render/renderTextarea";
 import { Text } from "@/common/components/Text";
@@ -29,6 +30,9 @@ export default function Home() {
 
       <div className="h my-10 w-full border border-gray-200/30" />
       <RenderButtons />
+
+      <div className="h my-10 w-full border border-gray-200/30" />
+      <RenderSegmentedControl />
 
       <div className="h my-10 w-full border border-gray-200/30" />
       <RenderCombobox />
