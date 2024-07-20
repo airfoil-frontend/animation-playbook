@@ -13,6 +13,7 @@
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-tooltip": "^1.1.2",
     "@types/lodash": "^4.17.6",
     "@types/pluralize": "^0.0.33",
     "clsx": "^2.1.1",
