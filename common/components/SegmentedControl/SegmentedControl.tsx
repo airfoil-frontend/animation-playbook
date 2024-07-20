@@ -1,7 +1,10 @@
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import { Button, ButtonProps } from "@/common/components/Button";
-import { segmentedControlTheme } from "@/common/components/SegmentedControl/SegmentedControl.theme";
+import {
+  segmentedControlTheme,
+  SegmentedControlVariants,
+} from "@/common/components/SegmentedControl/SegmentedControl.theme";
 
 interface Option extends ButtonProps {
   value: string;
@@ -14,7 +17,9 @@ interface Option extends ButtonProps {
  * @interface SegmentedControlProps
  * @extends ComponentPropsWithoutRef<'div'>
  */
-export interface SegmentedControlProps extends ComponentPropsWithoutRef<"div"> {
+export interface SegmentedControlProps
+  extends Omit<ComponentPropsWithoutRef<"div">, "style">,
+    SegmentedControlVariants {
   /**
    * An array of options to be displayed in the segmented control.
    *
@@ -54,16 +59,19 @@ export const SegmentedControl = ({
   value,
   onValueChange,
   className,
+  ...variants
 }: SegmentedControlProps) => {
-  const base = segmentedControlTheme({
+  const { wrapper, button } = segmentedControlTheme({
     className,
+    ...variants,
   });
 
   return (
-    <div className={base}>
+    <div className={wrapper()}>
       {options.map((option) => (
         <Button
           key={option.value}
+          className={button()}
           size="sm"
           variant={value === option.value ? "tertiary" : "ghost"}
           {...option}

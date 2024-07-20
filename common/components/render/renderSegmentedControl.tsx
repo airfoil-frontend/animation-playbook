@@ -24,6 +24,13 @@ export const RenderSegmentedControl = () => {
         value={selectedTab}
         onValueChange={setSelectedTab}
       />
+      <SegmentedControl
+        className="flex-wrap gap-4"
+        options={OPTIONS}
+        style="connected"
+        value={selectedTab}
+        onValueChange={setSelectedTab}
+      />
     </div>
   );
 };
