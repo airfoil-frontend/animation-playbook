@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 
+import { GradientHeader } from "@/common/components/GradientHeader";
 import { useTypewriter } from "@/common/hooks/useTypewriter";
 
 export default function Home() {
@@ -40,6 +41,10 @@ export default function Home() {
         </button>
         {renderText}
       </div>
+
+      <div className="h-[2000px]" />
+
+      <GradientHeader />
     </main>
   );
 }
