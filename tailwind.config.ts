@@ -11,6 +11,10 @@ const config = {
         popover: "51",
         tooltip: "52",
       },
+      backgroundImage: {
+        "gradient-header":
+          "linear-gradient(270deg, rgba(255, 128, 5, 0.4) 3.28%, rgba(255, 0, 128, 0.4) 91.55%)",
+      },
     },
   },
   plugins: [],
