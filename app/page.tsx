@@ -42,7 +42,7 @@ export default function Home() {
         {renderText}
       </div>
 
-      <div className="h-[2000px]" />
+      <div className="h-[1800px]" />
 
       <GradientHeader />
     </main>

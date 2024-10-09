@@ -12,12 +12,11 @@ export const GradientHeader = () => {
       <h1 className="max-w-4xl text-center text-2xl leading-tight text-white md:text-6xl lg:text-7xl">
         <span className="relative inline-block">
           <span className="relative z-10">Generate</span>
-          {/* Gradient background */}
           <motion.span
             animate={{ opacity: inView ? 0.75 : 0 }}
-            className="bg-gradient-header absolute -inset-2 blur-2xl"
+            className="absolute -inset-x-2 -inset-y-4 bg-gradient-header blur-2xl"
             initial={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           />
         </span>
         {" videos in minutes"}
