@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import { GradientHeader } from "@/common/components/GradientHeader";
+import { VideoPlayer } from "@/common/components/VideoPlayer";
 import { useTypewriter } from "@/common/hooks/useTypewriter";
 
 export default function Home() {
@@ -43,6 +44,8 @@ export default function Home() {
       </div>
 
       <div className="h-screen" />
+
+      <VideoPlayer />
 
       <GradientHeader />
     </main>
