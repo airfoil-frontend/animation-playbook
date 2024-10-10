@@ -15,6 +15,14 @@ const config = {
         "gradient-header":
           "linear-gradient(270deg, rgba(255, 128, 5, 0.4) 3.28%, rgba(255, 0, 128, 0.4) 91.55%)",
       },
+      colors: {
+        grays: {
+          "20-white": "#FFFFFF",
+          16: "#D5D8DC",
+          5: "#31343A",
+          3: "#1E2024",
+        },
+      },
     },
   },
   plugins: [],
