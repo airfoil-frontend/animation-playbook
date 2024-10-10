@@ -5,6 +5,7 @@ import { CoreLayout } from "@/common/components/CoreLayout";
 import type { Metadata } from "next";
 
 import "@/common/styles/globals.scss";
+import "keen-slider/keen-slider.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

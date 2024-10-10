@@ -4,6 +4,7 @@ import { useState } from "react";
 import { GradientHeader } from "@/common/components/GradientHeader";
 import { VideoPlayer } from "@/common/components/VideoPlayer";
 import { useTypewriter } from "@/common/hooks/useTypewriter";
+import { HowItWorksSection } from "@/modules/sections/HowItWorks";
 
 export default function Home() {
   const [typeText, setTypeText] = useState("");
@@ -43,7 +44,11 @@ export default function Home() {
         {renderText}
       </div>
 
-      <div className="h-screen" />
+      <div className="h my-10 w-full border border-gray-200/30" />
+
+      <HowItWorksSection />
+
+      <div className="h my-10 w-full border border-gray-200/30" />
 
       <VideoPlayer />
 

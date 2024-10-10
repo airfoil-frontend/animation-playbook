@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  content: ["./common/**/*.{js,ts,jsx,tsx}", "./app/**/*.{js,ts,jsx,tsx}"],
+  content: ["./common/**/*.{js,ts,jsx,tsx}", "./modules/**/*.{js,ts,jsx,tsx}","./app/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       zIndex: {

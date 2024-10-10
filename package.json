@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "framer-motion": "^11.11.4",
+    "keen-slider": "^6.8.6",
     "lodash": "^4.17.21",
     "next": "14.2.5",
     "pluralize": "^8.0.0",
