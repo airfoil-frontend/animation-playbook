@@ -28,7 +28,12 @@ export const HowItWorksSection = () => {
     },
   ];
 
-  const onProgressBarCompletedFn = () => {
+  const onTabClick = (index: number) => {
+    instanceRef?.current?.moveToIdx(index);
+    setCurrentProgressBar(index);
+  };
+
+  const onProgressBarComplete = () => {
     const nextIndex = (currentProgressBar + 1) % 3;
     instanceRef?.current?.moveToIdx(nextIndex);
     setCurrentProgressBar(nextIndex);
@@ -36,7 +41,6 @@ export const HowItWorksSection = () => {
 
   const { currentProgressBar, setCurrentProgressBar } = useProgressBar({
     initialValue: 0,
-    onCompletedFn: onProgressBarCompletedFn,
   });
 
   return (
@@ -56,7 +60,7 @@ export const HowItWorksSection = () => {
             <button
               key={idx}
               className="flex flex-col gap-10 rounded-xl text-white hover:bg-white/10"
-              onClick={onProgressBarCompletedFn}
+              onClick={() => onTabClick(idx)}
             >
               <div className="flex items-start gap-5">
                 <div className="w-fit rounded-full bg-white px-3 py-0.5 text-black">
@@ -74,7 +78,7 @@ export const HowItWorksSection = () => {
                 }
                 currentIndex={currentProgressBar}
                 index={idx}
-                onCompletedFn={onProgressBarCompletedFn}
+                onCompletedFn={onProgressBarComplete}
               />
             </button>
           ))}
