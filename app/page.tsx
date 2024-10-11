@@ -2,7 +2,6 @@
 import { useState } from "react";
 
 import { GradientHeader } from "@/common/components/GradientHeader";
-import { ProgressBar } from "@/common/components/ProgressBar";
 import { VideoPlayer } from "@/common/components/VideoPlayer";
 import { useTypewriter } from "@/common/hooks/useTypewriter";
 import { HowItWorksSection } from "@/modules/sections/HowItWorks";
@@ -13,10 +12,6 @@ export default function Home() {
     text: typeText,
     speed: 70,
   });
-  const [currentProgressBar, setCurrentProgressBar] = useState(1);
-  const handleProgressBarCompleted = () => {
-    setCurrentProgressBar(currentProgressBar + 1);
-  };
 
   return (
     <main className="mx-auto flex min-h-screen max-w-screen-xl flex-col items-center px-24 py-10">
@@ -56,16 +51,6 @@ export default function Home() {
       <div className="h my-10 w-full border border-gray-200/30" />
 
       <VideoPlayer />
-
-      <div className="flex w-full gap-4">
-        {Array.from({ length: 3 }).map((_, index) => (
-          <ProgressBar
-            key={index}
-            animate={currentProgressBar === index + 1}
-            onCompletedFn={handleProgressBarCompleted}
-          />
-        ))}
-      </div>
 
       <GradientHeader />
     </main>
