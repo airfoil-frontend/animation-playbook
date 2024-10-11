@@ -25,6 +25,8 @@ export const ProgressBar = ({
             onCompletedFn();
           }
         });
+    } else {
+      controls.set({ width: "0%" });
     }
   }, [controls, onCompletedFn, animate]);
 
@@ -33,7 +35,7 @@ export const ProgressBar = ({
       <div className="h-[2px] overflow-hidden rounded-full bg-grays-20-white/20">
         <motion.div
           animate={controls}
-          className="bg-gradient-progress h-full rounded-full"
+          className="h-full rounded-full bg-gradient-progress"
           initial={{ width: 0 }}
         />
       </div>
