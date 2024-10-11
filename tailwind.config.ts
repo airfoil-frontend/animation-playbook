@@ -1,7 +1,11 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  content: ["./common/**/*.{js,ts,jsx,tsx}", "./modules/**/*.{js,ts,jsx,tsx}","./app/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./common/**/*.{js,ts,jsx,tsx}",
+    "./modules/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       zIndex: {
@@ -14,6 +18,8 @@ const config = {
       backgroundImage: {
         "gradient-header":
           "linear-gradient(270deg, rgba(255, 128, 5, 0.4) 3.28%, rgba(255, 0, 128, 0.4) 91.55%)",
+        "gradient-progress":
+          "linear-gradient(267.65deg, rgba(255, 128, 5, 0.8) 17.47%, rgba(255, 0, 128, 0.8) 76.09%)",
       },
       colors: {
         grays: {
