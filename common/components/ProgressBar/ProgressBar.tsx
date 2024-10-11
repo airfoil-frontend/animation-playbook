@@ -4,15 +4,25 @@ import { useEffect } from "react";
 interface ProgressBarProps {
   onCompletedFn?: () => void;
   animate?: boolean;
+  index?: number;
+  currentIndex?: number;
 }
 
 export const ProgressBar = ({
   onCompletedFn,
   animate = true,
+  currentIndex = 0,
+  index = 0,
 }: ProgressBarProps) => {
   const controls = useAnimation();
 
   useEffect(() => {
+    if (index !== currentIndex) {
+      controls.stop();
+      controls.start({ width: "0%", transition: { duration: 0 } });
+      return;
+    }
+
     if (animate) {
       controls
         .start({
@@ -20,15 +30,13 @@ export const ProgressBar = ({
           transition: { duration: 4, ease: "linear" },
         })
         .then(() => {
-          controls.set({ width: "100%" });
-          if (onCompletedFn) {
-            onCompletedFn();
+          if (index === currentIndex) {
+            controls.set({ width: "100%" });
+            onCompletedFn?.();
           }
         });
-    } else {
-      controls.set({ width: "0%" });
     }
-  }, [controls, onCompletedFn, animate]);
+  }, [controls, onCompletedFn, animate, index, currentIndex]);
 
   return (
     <div className="mx-auto w-full max-w-md">

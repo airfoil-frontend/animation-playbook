@@ -6,20 +6,11 @@ type UseProgressBarProps = {
   maxValue?: number;
 };
 
-export const useProgressBar = ({
-  initialValue = 0,
-  onCompletedFn,
-  maxValue = 3,
-}: UseProgressBarProps) => {
+export const useProgressBar = ({ initialValue = 0 }: UseProgressBarProps) => {
   const [currentProgressBar, setCurrentProgressBar] = useState(initialValue);
-
-  const handleProgressBarCompleted = () => {
-    onCompletedFn?.();
-    setCurrentProgressBar((prev) => (prev + 1) % maxValue);
-  };
 
   return {
     currentProgressBar,
-    handleProgressBarCompleted,
+    setCurrentProgressBar,
   };
 };
