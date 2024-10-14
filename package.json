@@ -22,6 +22,7 @@
     "framer-motion": "^11.11.4",
     "gsap": "^3.12.5",
     "keen-slider": "^6.8.6",
+    "lenis": "^1.1.14",
     "lodash": "^4.17.21",
     "next": "14.2.5",
     "pluralize": "^8.0.0",
