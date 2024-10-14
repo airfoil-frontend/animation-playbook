@@ -1,5 +1,6 @@
-import { useInView } from "framer-motion";
-import * as motion from "framer-motion/client";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import { useRef } from "react";
 
 const images = [
@@ -23,12 +24,44 @@ const images = [
 ];
 
 export const PopInAnimation = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  // const { ref, inView } = useInView({
-  //   triggerOnce: true,
-  //   threshold: 0.2, // Animasi saat 20% dari section terlihat
-  // });
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const imagesRef = useRef<HTMLDivElement[]>([]);
+
+  useGSAP(() => {
+    if (!sectionRef.current) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+      }
+    })
+
+    if (!imagesRef.current) return;
+
+    imagesRef.current.forEach((image, index) => {
+      tl.fromTo(image, {
+        scale: 0,
+        x: 0,
+        y: 0,
+        opacity: 0,
+      }, {
+        scale: 1,
+        x: images[index].position.x,
+        y: images[index].position.y,
+        opacity: 1,
+        duration: 1,
+        delay: Math.random() * 0.1,
+        ease: 'power3.out',
+      }, `-=${Math.random() * 0.1}`)
+    })
+
+    return () => {
+      ScrollTrigger.killAll();
+    }
+  }, [sectionRef, imagesRef]);
 
   const imageVariants = (x: number, y: number, index: number) => ({
     hidden: { scale: 0, x: 0, y: 0, opacity: 0 }, 
@@ -43,21 +76,13 @@ export const PopInAnimation = () => {
 
   return (
     <section
-      ref={ref}
+      ref={sectionRef}
       className="relative flex h-screen w-full items-center justify-center overflow-hidden"
     >
       {images.map((image, index) => (
-        <motion.img
-          key={index}
-          alt={`image-${index}`}
-          animate={isInView ? "visible" : "hidden"}
-          className="absolute z-0 object-cover"
-          height={image.height}
-          initial="hidden"
-          src={image.src}
-          variants={imageVariants(image.position.x, image.position.y, index)}
-          width={image.width}
-        />
+        <div key={index} ref={(el) => { imagesRef.current[index] = el!; }} className="absolute z-0" style={{ width: image.width, height: image.height }}>
+          <Image fill priority alt={`pop-in-${index}`} className="object-cover" src={image.src} />
+        </div>
       ))}
       <div className="flex flex-col relative z-10 items-center justify-center gap-6 text-center">
         <h3 className="max-w-[700px] text-[56px] leading-[64px]">Characters as boundless as your imagination.</h3>
