@@ -1,11 +1,19 @@
+
+"use client";
+
 import { useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import { ReactNode } from 'react';
+import { ReactLenis } from 'lenis/react';
+import { PropsWithChildren } from 'react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(useGSAP);
 }
 
-export const Providers = ({ children }: { children: ReactNode }) => {
-  return children
+export const Providers = ({ children }: PropsWithChildren) => {
+  return (
+    <ReactLenis root>
+      {children}
+    </ReactLenis>
+  )
 }
